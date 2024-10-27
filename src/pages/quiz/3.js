@@ -13,7 +13,7 @@ export default function GeographyQuizPage() {
             <h1>{geographyQuiz.quizName}</h1>
             <br></br>
             <p>This quiz contains {geographyQuiz.quizQuestions.length} questions.</p>
-            <p>Each question has 4 answers.</p>
+            <p>Each question has {geographyQuiz.quizQuestions[0].answers.length} answers.</p>
             <p>A question has only one correct answer.</p>
             <p>Good luck!</p>
             <br></br>

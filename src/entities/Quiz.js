@@ -1,4 +1,4 @@
-import { artQuestions, historyQuestions, geographyQuestions } from './Question';
+import { artQuestions, historyQuestions, geographyQuestions } from '../entities/Question';
 
 class Quiz {
     constructor(quizId, quizName, quizQuestions) {
@@ -8,9 +8,9 @@ class Quiz {
     }
 }
 
-const artQuiz = new Quiz(1, "Art Quiz", artQuestions);
-const historyQuiz = new Quiz(2, "History Quiz", historyQuestions);
-const geographyQuiz = new Quiz(3, "Geography Quiz", geographyQuestions);
+const artQuiz = new Quiz(1, 'Art Quiz', artQuestions);
+const historyQuiz = new Quiz(2, 'History Quiz', historyQuestions);
+const geographyQuiz = new Quiz(3, 'Geography Quiz', geographyQuestions);
 
 export { artQuiz, historyQuiz, geographyQuiz };
 export default Quiz;
