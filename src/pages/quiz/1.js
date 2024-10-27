@@ -13,7 +13,7 @@ export default function ArtQuizPage() {
             <h1>{artQuiz.quizName}</h1>
             <br></br>
             <p>This quiz contains {artQuiz.quizQuestions.length} questions.</p>
-            <p>Each question has 4 answers.</p>
+            <p>Each question has {artQuiz.quizQuestions[0].answers.length} answers.</p>
             <p>A question has only one correct answer.</p>
             <p>Good luck!</p>
             <br></br>

@@ -7,7 +7,7 @@ export default function Categories() {
           <h1 className="text-3xl font-bold">Categories</h1>
           <br></br>
           <br></br>
-          <p><h1 className="text-2xl font-bold">Press on a category to start the quiz:</h1></p>
+          <h1 className="text-2xl font-bold">Press on a category to start the quiz:</h1>
           <ul className="mt-4">
             {categories.map((category) => (
               <li key={category.id} className="mb-2">

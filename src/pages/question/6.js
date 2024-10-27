@@ -1,11 +1,16 @@
 import { useRouter } from 'next/router';
-import { historyQuiz } from '../../entities/Quiz';
 import { useState } from 'react';
 
-export default function HistoryQuizPage() {
+export default function HistoryQuizPage( {question} ) {
     const router = useRouter();
     const [selectedAnswer, setSelectedAnswer] = useState("");
-    const currentQuestion = historyQuiz.quizQuestions[2];
+    const currentQuestion = question;
+    let [answerCorrectFromFirstTry, setAnswerCorrectFromFirstTry] = useState(true); 
+    let score = parseInt(router.query.score) || 0;
+
+    const updateScore = () => {
+        score++;
+    }
 
     const handleAnswerChange = (e) => {
         setSelectedAnswer(e.target.value);
@@ -14,21 +19,26 @@ export default function HistoryQuizPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (selectedAnswer === currentQuestion.correctAnswer) {
+            if (answerCorrectFromFirstTry) {
+                updateScore();
+            }
             alert("Correct answer! You have completed the quiz!");
-            router.push(`/`);
+            router.push({
+                pathname: '/endPages/historyQuizEndPage',
+                query: { score: score },
+            });
         } else {
+            setAnswerCorrectFromFirstTry(false);
             alert("Incorrect answer. Try again!");
         }
     };
 
     return (
         <div className="quiz-container">
-            <h1>{historyQuiz.quizName}</h1>
-            <br></br>
             <h2>{currentQuestion.question}</h2>
 
             <form onSubmit={handleSubmit}>
-                {currentQuestion.answer.map((option, index) => (
+                {currentQuestion.answers.map((option, index) => (
                     <div key={index}>
                         <input
                             type="radio"
@@ -46,4 +56,15 @@ export default function HistoryQuizPage() {
             </form>
         </div>
     );
+}
+
+export async function getStaticProps() {
+    const res = await import('/public/questions.json');
+    const historyQuestions = res.historyQuestions;
+
+    return {
+        props: {
+            question: historyQuestions[2]
+        }
+    };
 }
