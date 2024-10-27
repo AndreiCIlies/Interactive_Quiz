@@ -1,14 +1,7 @@
-class Category{
-    constructor(id, name){
-        this.id = id;
-        this.name = name;
-    }
-}
-
 const categories = [
-    new Category(1, "Art"),
-    new Category(2, "History"),
-    new Category(3, "Geography")
+    { id: 'art', name: 'Art' },
+    { id: 'history', name: 'History' },
+    { id: 'geography', name: 'Geography' }
 ];
 
 export default categories;

@@ -24,6 +24,9 @@ export default function Home() {
         <p className="text-lg"><Link href="/categories">
           Press to see the categories
         </Link></p>
+        <p className="text-lg"><Link href="/addQuestion">
+          Press to add questions
+        </Link></p>
 
       </main>
     </div>
