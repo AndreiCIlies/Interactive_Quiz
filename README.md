@@ -1,4 +1,4 @@
-# Interactive Quiz App
+# Interactive Quiz
 
 ## Description
 
@@ -7,8 +7,8 @@
 ## Installation and Running Instructions
 
 **1. Clone the repository**  
-git clone https://github.com/AndreiCIlies/Interactive_Quiz_App.git  
-cd Interactive_Quiz_App
+git clone https://github.com/AndreiCIlies/Interactive_Quiz.git  
+cd pathToClonedRepository
 
 **2. Install dependencies**  
 npm install
