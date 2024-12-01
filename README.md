@@ -2,7 +2,13 @@
 
 ## Description
 
+Explore a variety of categories, take quizzes, and test your knowledge! Get multiple chances to answer each question correctly: if you miss a question, simply try again until you succeed! Track your progress with a final score displayed at the end and easily return to the homepage. Add new questions with existing or custom categories to keep the quiz fresh and fun. Ready to challenge yourself? Start quizzing now!
+
 ## Technologies Used
+
+* JavaScript.
+* Next.js.
+* React.
 
 ## Installation and Running Instructions
 
