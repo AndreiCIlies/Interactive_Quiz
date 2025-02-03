@@ -10,7 +10,7 @@ Explore a variety of categories, take quizzes, and test your knowledge! Get mult
 * Next.js.
 * React.
 
-## Installation and Running Instructions
+## Installation and Usage
 
 **1. Clone the repository**  
 git clone https://github.com/AndreiCIlies/Interactive_Quiz.git  
